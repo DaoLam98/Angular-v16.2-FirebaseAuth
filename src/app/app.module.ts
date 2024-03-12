@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ManageVoucherComponent } from './components/manage-voucher/manage-voucher.component';
 import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     AppComponent,
     LoginComponent,
     SignUpComponent,
-    DashboardComponent
+    ManageVoucherComponent
   ],
   imports: [
     BrowserModule,
