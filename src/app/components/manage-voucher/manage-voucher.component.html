@@ -9,8 +9,42 @@
 <!--      Out</button>-->
 <!--  </div>-->
 
-  <div class="w-full h-96 flex flex-col justify-center items-center">
-    <p class="text-4xl dark:text-gray-50">Voucher hấp dẫn</p>
+<!--  <div class="w-full h-96 flex flex-col justify-center items-center">-->
+<!--    <p class="text-4xl dark:text-gray-50">Voucher hấp dẫn</p>-->
+<!--  </div>-->
+  <div class="container">
+    <form >
+      <div><mat-label class="">Bộ lọc</mat-label></div>
+      <mat-form-field>
+        <mat-label>Từ khóa</mat-label>
+        <input matInput formControlName="keyword" />
+      </mat-form-field>
+      <button mat-button mat-raised-button color="primary">Tìm kiếm</button>
+      <button mat-button mat-stroked-button color="primary" >Huỷ bộ lọc</button>
+    </form>
   </div>
-
+  <table mat-table >
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>STT</th>
+<!--      <td mat-cell *matCellDef="let element; let i = index">{{ paginator.pageIndex * paginator.pageSize + i + 1 }}</td>-->
+    </ng-container>
+    <ng-container matColumnDef="fullName">
+      <th mat-header-cell *matHeaderCellDef>User</th>
+    </ng-container>
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef>Tên</th>
+    </ng-container>
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef>Số điện thoại</th>
+    </ng-container>
+    <ng-container matColumnDef="createdAt">
+      <th mat-header-cell *matHeaderCellDef>Ngày tạo</th>
+    </ng-container>
+    <ng-container matColumnDef="updatedAt">
+      <th mat-header-cell *matHeaderCellDef>Ngày cập nhật</th>
+    </ng-container>
+    <ng-container matColumnDef="mangeUserMessageDetail">
+      <th mat-header-cell *matHeaderCellDef>Số cif xem SMS</th>
+    </ng-container>
+  </table>
 </main>
